@@ -1,0 +1,9 @@
+Things for blue agent to be able to do: 
+   1. observe, continuously collect telemtry such as logs, processes, network activities, file changes, etc. 
+   2. analyze, the agent will be able to take that telemetry and then cross reference it with databases such as the 
+   MITRE ATT&CK framework and other databases similar in function in order to determine if an attack is actually occuring
+   3. Once finished analyzing, the agent will be able to decide on a course of action that will give it the best chance of stopping
+   the attack before it can cause too much damage. 
+   4. Once the proper course of action is determined, the agent will then carry out this action to defeat the attacker and 
+   drive it out of the system
+   
