@@ -1,9 +1,27 @@
 Things for blue agent to be able to do: 
    1. observe, continuously collect telemtry such as logs, processes, network activities, file changes, etc. 
+        main ones to use are the windows system logs, such as windows event viewer, windows event log API (for the python),
+        and windows event forwarding. As well as Sysmon, ETW which is a built-in windows feature. 
    2. analyze, the agent will be able to take that telemetry and then cross reference it with databases such as the 
    MITRE ATT&CK framework and other databases similar in function in order to determine if an attack is actually occuring
+        Frameworks to use are MITRE ATT&CK in order to classify the attack correctly in order to determine the charcteristics
+        and methods of said attack. Another one to use is the Sigma Rules, which are essentially logic equations that 
+        tell the agent if it sees different behaviors together then its most likely malicious. The third aspect is to use the 
+        Cyber Kill Chain to identify which stage of the attack is occuring. 
    3. Once finished analyzing, the agent will be able to decide on a course of action that will give it the best chance of stopping
    the attack before it can cause too much damage. 
+        For this step the agent will use the conclusions that it has drawn in the previous step to 'score' and rate the attack
+        in the terms of its severity and potential risk so that the agent can determine how necessary it is to stop it
    4. Once the proper course of action is determined, the agent will then carry out this action to defeat the attacker and 
    drive it out of the system
-   
+        the actions that the agent will be able to take will fall into separate categories, such as:
+            processes: the ability to cancel/suspend suspicious processes, dumping a processes memory for further inspection,
+            and collecting the execuable files for processes in order to properly examine them 
+            network: blocking IPs, ports, disabling adapters, adding firewall rules and using the firewall in general 
+            users: disabling unknown or malicious accounts, forcing accounts to logout, reseting passwords and taking away 
+            permissions
+            files: deleting malware, moving contaminated files to containment, hashinh suspicious files to see if theyve
+            been changed, then copying evidence for further examination or documentation
+            services: stopping, disabling or deleting suspicious or unknown services currently running
+            scheduled tasks: disabling unknown or malicious tasks as well as ensuring they aren't persistent
+            registry: deleting run keys and malicious services as well as undoing the persistance of anything 
