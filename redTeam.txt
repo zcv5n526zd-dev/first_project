@@ -1,0 +1,31 @@
+have built in exploits in the blue team machine, but have them be completely unknown by the red agent.
+
+flow of actions would be: 
+    scan the network and find hosts
+        mainly use nmap for this step of the attack, as it provides all of the necessary information for this step
+    identify services on hosts
+        nmap can also be used for this step of the process, as depending on the arguments passed into the tool it can 
+        be used to perform an in depth scan of any services running on a given system as well as their versions for the 
+        agent to better identify vulnerabilities
+    identify vulnerabilities 
+        similar to the blue agent, for this decision making process the agent will be given access to three data sources
+        so that it can map the information its obtained from scanning the system to known vulnerabilities and methods of 
+        attack, and try and see if its current circumstances match. allowing it to better pick a next course of action. 
+        the sources of data used will be MITRE ATT&CK, a local vulnerability database that will be given to the agent, to
+        be made up of both vulnerabilities that are already built into the blue team machine, testing to see if the agent
+        can accurately find them, as well as other, known vulnerabilities but not actually in place, the third source will 
+        be Nmap NSE, which are scripts included with NMAP that can be used to identify common weaknesses and config issues 
+        of networks, more info to use. 
+    choose strategy
+        The agent will take the information it has gleaned so far and then use it to determine as many possible vectors of 
+        attack that it can, as many exploits and vulnerabilities it can use to gain access and find the flags. Then it 
+        will assign scores to each one depending on a couple factors, risk, reward, and an overall confidence level, all 
+        three will culiminate into one overall score which will determine the agents next course of action
+    use exploit and verify success 
+        given the vulnerabilities that are going to be built into the blue teams system, the exploits will be custom built 
+        to only work on one vulnerability, putting the onus on the agent to correctly find the vulnerabilities then match
+        the correct exploit to the correct vulnerability, giving it less freedom but still testing its ability to make 
+        correct decisions and its ability to find vulnerabilities
+    find the flag
+        once the agent has gained access to the system, it will then use that access to find files hidden throughout the 
+        system and extract them, a way to keep score and track its success.
