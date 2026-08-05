@@ -1,0 +1,18 @@
+Rules based AI can, at the very base level be condensed down into a giant collection of if/then statements, however
+this can lead to there being hundreds of if/then statements to solve the many different situations that the AI might 
+face. 
+There are a couple things that can be said to make up a rules based AI, which are its current knowledge, the rules 
+its bound by, the actions it can take, and the decision making processes.
+Ideally best to make a base framework then adapt that framework to each role the agents will be fulfilling, the red team
+blue team and white team. 
+the core loop of the agents will be:
+    observe the environment (systems, networks, etc.)
+    update their knowledge base with what theyve observed
+    cross their knowledge with their rules
+    pick whichever rule most closely matches their knowledge
+    perform that action encoded into the rule
+    record any changes and the overall result of that action
+    repeat
+the next step is to define what exaclty the information the agents will be gathering, this can be network telemetry, output 
+from logging tools and scanning tools, information of that nature. the agents will also have their own private memories to 
+allow at least a baseline level of memory. 
