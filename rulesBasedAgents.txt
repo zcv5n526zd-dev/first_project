@@ -16,3 +16,10 @@ the core loop of the agents will be:
 the next step is to define what exaclty the information the agents will be gathering, this can be network telemetry, output 
 from logging tools and scanning tools, information of that nature. the agents will also have their own private memories to 
 allow at least a baseline level of memory. 
+For the rules it's best to keep them focused and narrow instead of broad, making it easier for the ai to apply them and 
+figure out which one is best to use based on the scenario at hand. its also best to have rules implement actions instead 
+of baking the actions into the rules themselves, also keeping the scope of those actions limited.
+At a baseline rules are simple, containing a name, a condition, an action, and then a priority level in case two rules come 
+into conflict. Another good practice for rules is to have a baseline or default rule that the ai can use when no other rules 
+are applicable based on what it knows about its environment
+A good method is to have a basic template with a core logic loop and 
