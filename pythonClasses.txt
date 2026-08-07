@@ -1,0 +1,28 @@
+Simulation State: what is true about the simulated world around the agents
+
+AgentState: information that is only known by the ai itself, what the agent believes to be true about the simulation around it
+
+Actions: the actions that the agents will be able to take, can make subclasses for individual actions 
+
+Rule: a class for the rules that will make up the ai's core decision making aspects, can have name, condition, action, 
+priority 
+
+BaseAgent: the very basics of one of the agents for this simulation, can contain the core loop of the agents within before
+being branched out to more specific roles like red, blue and white
+
+Observation: a way to take the raw data that the agents would gather, for instance from an nmap scan from the red team or a 
+log from sysmon from the blue team, this class can take that data and pack it into something more manageable from a programming
+side and standardize it all
+
+Decision: this will basically be what the agents send to the white team for approval, it will contain the agent name, the rule 
+they used, the action theyre deciding to take, the score assigned to it and the reason for it
+
+ActionResult: this will be the output of an action, whether it was successful or not, as well as the data that will result whenever
+an action is used 
+
+ContollerAgent: the class that will be used to make the white team agent, the admin of the entire simulation once it's all put
+together
+
+blue/redTeamAgent: the classes for the blue and red team, which will take the base agent class and then specialize it towards
+either offense or defense respectively.
+
