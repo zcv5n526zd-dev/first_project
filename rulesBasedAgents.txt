@@ -22,4 +22,4 @@ of baking the actions into the rules themselves, also keeping the scope of those
 At a baseline rules are simple, containing a name, a condition, an action, and then a priority level in case two rules come 
 into conflict. Another good practice for rules is to have a baseline or default rule that the ai can use when no other rules 
 are applicable based on what it knows about its environment
-A good method is to have a basic template with a core logic loop and 
+A good method is to have a basic template with a core logic loop and build off of that to create all three of the ai's to be used

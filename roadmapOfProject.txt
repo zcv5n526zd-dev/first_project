@@ -1,0 +1,15 @@
+1. create the base class and skeleton of the rules based ai, a base to build the three more specialized versions off of
+
+2. create the base software for the red team agent first and test against a system with the same built in vulnerabilities 
+that the finished blue team system will have
+
+3. create the software for the blue team agent and test against a basic, straightforward attack script to ensure everything 
+is working correctly
+
+4. create the software for the white team agent and test with two rudimentary 'dummy' systems whose sole purpose is to 
+make sure that the features the white agent is supposed to carry out work. 
+
+5. create the physical infrastructure to house the ai's, build the vulnerabilities into the blue team system
+
+6. make the red and blue team face off against each other ai v ai with the white team overseeing it all, add some infrastructure
+like a scoreboard. 
