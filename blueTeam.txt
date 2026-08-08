@@ -6,8 +6,9 @@ Things for blue agent to be able to do:
    MITRE ATT&CK framework and other databases similar in function in order to determine if an attack is actually occuring
         Frameworks to use are MITRE ATT&CK in order to classify the attack correctly in order to determine the charcteristics
         and methods of said attack. Another one to use is the Sigma Rules, which are essentially logic equations that 
-        tell the agent if it sees different behaviors together then its most likely malicious. The third aspect is to use the 
-        Cyber Kill Chain to identify which stage of the attack is occuring. 
+        tell the agent if it sees different behaviors together then its most likely malicious, like if X and Y are present,
+        behavior is likely malicious. The third aspect is to use the Cyber Kill Chain to identify which stage of the 
+        attack is occuring. 
    3. Once finished analyzing, the agent will be able to decide on a course of action that will give it the best chance of stopping
    the attack before it can cause too much damage. 
         For this step the agent will use the conclusions that it has drawn in the previous step to 'score' and rate the attack
@@ -25,3 +26,10 @@ Things for blue agent to be able to do:
             services: stopping, disabling or deleting suspicious or unknown services currently running
             scheduled tasks: disabling unknown or malicious tasks as well as ensuring they aren't persistent
             registry: deleting run keys and malicious services as well as undoing the persistance of anything 
+
+
+vulnerabilities to be used: 
+    intentionally leaving a port open, putting a hole in the firewall, use a version of software that has known holes in it, 
+    have a user account where the password is either not set or its just 'password', deliberately misconfigure settings 
+    and leave some permissions as open or unlocked. 
+    
