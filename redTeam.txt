@@ -1,7 +1,7 @@
 have built in exploits in the blue team machine, but have them be completely unknown by the red agent.
 
 flow of actions would be: 
-    scan the network and find hosts
+    scan the host for the first time
         mainly use nmap for this step of the attack, as it provides all of the necessary information for this step
     identify services on hosts
         nmap can also be used for this step of the process, as depending on the arguments passed into the tool it can 
@@ -29,3 +29,7 @@ flow of actions would be:
     find the flag
         once the agent has gained access to the system, it will then use that access to find files hidden throughout the 
         system and extract them, a way to keep score and track its success.
+
+exploits will be scripts that are designed to be used oly on a specific vulnerability. This puts the onus on the ai to 
+correctly find and determine which exploit works for which vulnerability. So once it finds something and correctly 
+determines if its a vulnerability or not, 

@@ -21,8 +21,8 @@ Things for blue agent to be able to do:
             network: blocking IPs, ports, disabling adapters, adding firewall rules and using the firewall in general 
             users: disabling unknown or malicious accounts, forcing accounts to logout, reseting passwords and taking away 
             permissions
-            files: deleting malware, moving contaminated files to containment, hashinh suspicious files to see if theyve
-            been changed, then copying evidence for further examination or documentation
+            files: deleting malware, moving contaminated files to containment, hashing files to see if theyve been changed, 
+            then copying evidence for further examination or documentation
             services: stopping, disabling or deleting suspicious or unknown services currently running
             scheduled tasks: disabling unknown or malicious tasks as well as ensuring they aren't persistent
             registry: deleting run keys and malicious services as well as undoing the persistance of anything 
